@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mytomcat-deploy
+  labels:
+    app: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 2
+  template:
+    metadata:
+      name: mytomcat-app
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: mytomcat-container
+          image: ommaxyl/mytomcat
+          ports:
+            - containerPort: 8080
+
+
+    
