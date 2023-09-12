@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mytomcat-container
-          image: ommaxyl/mytomcat
+          image: ommaxyl/mytomcat:2
           ports:
             - containerPort: 8080
 
